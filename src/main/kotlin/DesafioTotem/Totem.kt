@@ -41,7 +41,7 @@ class Totem(private val fastFood: FastFood){
         }
     }
 
-    private fun mostrarCardapioLanches(usuario: String) {
+    fun mostrarCardapioLanches(usuario: String) {
         println("===== Lanches =====")
         for ((codigo, item) in fastFood.cardapioLanches) {
             println("$codigo. ${item.nome} - R$ ${item.preco}")
@@ -92,7 +92,7 @@ class Totem(private val fastFood: FastFood){
         }
     }
 
-    private fun selecionarQuantidade(usuario: String, itemEscolhido: String, preco: Double) {
+    fun selecionarQuantidade(usuario: String, itemEscolhido: String, preco: Double) {
         println("Digite a quantidade:")
         val quantidade = readLine()?.toIntOrNull()
 
@@ -105,7 +105,7 @@ class Totem(private val fastFood: FastFood){
         }
     }
 
-    private fun editarItem(usuario: String) {
+    fun editarItem(usuario: String) {
         println("Digite o código do item que deseja editar:")
         val codigo = readLine() ?: ""
         println("Digite a nova quantidade:")
@@ -120,7 +120,7 @@ class Totem(private val fastFood: FastFood){
         }
     }
 
-    private fun excluirItem(usuario: String) {
+    fun excluirItem(usuario: String) {
         println("Digite o código do item que deseja excluir:")
         val codigo = readLine() ?: ""
 
@@ -135,7 +135,7 @@ class Totem(private val fastFood: FastFood){
         for ((item, quantidade, preco) in carrinho) {
             println("$quantidade x ${item.nome} - R$ ${quantidade * preco}")
         }
-        println("===============================")
+        println("===================================")
         println("Valor total do pedido: R$ $total")
         println("Forma de pagamento:")
         println("1 ⇾ Cartão de Crédito")
