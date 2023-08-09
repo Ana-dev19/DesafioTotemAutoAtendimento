@@ -1,7 +1,7 @@
 package DesafioTotem
 class FastFood {
     private var pedidoCounter = 1
-    data class ItemCardapio(val codigo: String, val nome: String,val preco: Double)
+    data class ItemCardapio(val codigo: String, val nome: String, val preco: Double)
 
 
     val cardapioLanches = mutableMapOf(
@@ -60,7 +60,7 @@ class FastFood {
     }
 
      fun codigoPedido(): String {
-         val codigoPedido = "\nPEDIDO-${pedidoCounter.toString().padStart(4, '1')}"
+         val codigoPedido = "PEDIDO-${pedidoCounter.toString().padStart(4, '1')}"
          pedidoCounter++
          val pedidos = null
          val usuario = 0
